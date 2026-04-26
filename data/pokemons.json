@@ -1,0 +1,422 @@
+[
+  {
+    "id": 1, "name": "Torterra", "dificultad": "Novice", "tipo": "Planta/Tierra", "stats": { "hp": 95, "atk": 109, "def": 105, "spe": 56 },
+    "img_mini": "assets/sprites_mini/torterra.png", "img_large_gif": "assets/sprites_anim/torterra.gif",
+    "moves": [
+      {"name": "Wood Hammer", "power": 120, "accuracy": 100, "type": "Planta"},
+      {"name": "Earthquake", "power": 100, "accuracy": 100, "type": "Tierra"},
+      {"name": "Seed Bomb", "power": 80, "accuracy": 100, "type": "Planta"},
+      {"name": "Crunch", "power": 80, "accuracy": 100, "type": "Siniestro"},
+      {"name": "Stone Edge", "power": 100, "accuracy": 80, "type": "Roca"},
+      {"name": "Superpower", "power": 120, "accuracy": 100, "type": "Lucha"},
+      {"name": "Iron Tail", "power": 100, "accuracy": 75, "type": "Acero"},
+      {"name": "Razor Leaf", "power": 55, "accuracy": 95, "type": "Planta"}
+    ]
+  },
+  {
+    "id": 2, "name": "Infernape", "dificultad": "Expert", "tipo": "Fuego/Lucha", "stats": { "hp": 76, "atk": 104, "def": 71, "spe": 108 },
+    "img_mini": "assets/sprites_mini/infernape.png", "img_large_gif": "assets/sprites_anim/infernape.gif",
+    "moves": [
+      {"name": "Flare Blitz", "power": 120, "accuracy": 100, "type": "Fuego"},
+      {"name": "Close Combat", "power": 120, "accuracy": 100, "type": "Lucha"},
+      {"name": "Mach Punch", "power": 40, "accuracy": 100, "type": "Lucha"},
+      {"name": "Fire Punch", "power": 75, "accuracy": 100, "type": "Fuego"},
+      {"name": "Thunder Punch", "power": 75, "accuracy": 100, "type": "Eléctrico"},
+      {"name": "Acrobatics", "power": 55, "accuracy": 100, "type": "Volador"},
+      {"name": "Poison Jab", "power": 80, "accuracy": 100, "type": "Veneno"},
+      {"name": "U-turn", "power": 70, "accuracy": 100, "type": "Bicho"}
+    ]
+  },
+  {
+    "id": 3, "name": "Empoleon", "dificultad": "Intermediate", "tipo": "Agua/Acero", "stats": { "hp": 84, "atk": 86, "def": 88, "spe": 60 },
+    "img_mini": "assets/sprites_mini/empoleon.png", "img_large_gif": "assets/sprites_anim/empoleon.gif",
+    "moves": [
+      {"name": "Hydro Pump", "power": 110, "accuracy": 80, "type": "Agua"},
+      {"name": "Flash Cannon", "power": 80, "accuracy": 100, "type": "Acero"},
+      {"name": "Ice Beam", "power": 90, "accuracy": 100, "type": "Hielo"},
+      {"name": "Surf", "power": 90, "accuracy": 100, "type": "Agua"},
+      {"name": "Drill Peck", "power": 80, "accuracy": 100, "type": "Volador"},
+      {"name": "Steel Wing", "power": 70, "accuracy": 90, "type": "Acero"},
+      {"name": "Aqua Jet", "power": 40, "accuracy": 100, "type": "Agua"},
+      {"name": "Blizzard", "power": 110, "accuracy": 70, "type": "Hielo"}
+    ]
+  },
+  {
+    "id": 4, "name": "Staraptor", "dificultad": "Novice", "tipo": "Normal/Volador", "stats": { "hp": 85, "atk": 120, "def": 70, "spe": 100 },
+    "img_mini": "assets/sprites_mini/staraptor.png", "img_large_gif": "assets/sprites_anim/staraptor.gif",
+    "moves": [
+      {"name": "Brave Bird", "power": 120, "accuracy": 100, "type": "Volador"},
+      {"name": "Close Combat", "power": 120, "accuracy": 100, "type": "Lucha"},
+      {"name": "Double-Edge", "power": 120, "accuracy": 100, "type": "Normal"},
+      {"name": "Quick Attack", "power": 40, "accuracy": 100, "type": "Normal"},
+      {"name": "U-turn", "power": 70, "accuracy": 100, "type": "Bicho"},
+      {"name": "Aerial Ace", "power": 60, "accuracy": 100, "type": "Volador"},
+      {"name": "Steel Wing", "power": 70, "accuracy": 90, "type": "Acero"},
+      {"name": "Facade", "power": 70, "accuracy": 100, "type": "Normal"}
+    ]
+  },
+  {
+    "id": 5, "name": "Luxray", "dificultad": "Novice", "tipo": "Eléctrico", "stats": { "hp": 80, "atk": 120, "def": 79, "spe": 70 },
+    "img_mini": "assets/sprites_mini/luxray.png", "img_large_gif": "assets/sprites_anim/luxray.gif",
+    "moves": [
+      {"name": "Wild Charge", "power": 90, "accuracy": 100, "type": "Eléctrico"},
+      {"name": "Crunch", "power": 80, "accuracy": 100, "type": "Siniestro"},
+      {"name": "Ice Fang", "power": 65, "accuracy": 95, "type": "Hielo"},
+      {"name": "Fire Fang", "power": 65, "accuracy": 95, "type": "Fuego"},
+      {"name": "Spark", "power": 65, "accuracy": 100, "type": "Eléctrico"},
+      {"name": "Iron Tail", "power": 100, "accuracy": 75, "type": "Acero"},
+      {"name": "Play Rough", "power": 90, "accuracy": 90, "type": "Hada"},
+      {"name": "Superpower", "power": 120, "accuracy": 100, "type": "Lucha"}
+    ]
+  },
+  {
+    "id": 6, "name": "Roserade", "dificultad": "Intermediate", "tipo": "Planta/Veneno", "stats": { "hp": 60, "atk": 70, "def": 65, "spe": 90 },
+    "img_mini": "assets/sprites_mini/roserade.png", "img_large_gif": "assets/sprites_anim/roserade.gif",
+    "moves": [
+      {"name": "Leaf Storm", "power": 130, "accuracy": 90, "type": "Planta"},
+      {"name": "Sludge Bomb", "power": 90, "accuracy": 100, "type": "Veneno"},
+      {"name": "Giga Drain", "power": 75, "accuracy": 100, "type": "Planta"},
+      {"name": "Shadow Ball", "power": 80, "accuracy": 100, "type": "Fantasma"},
+      {"name": "Dazzling Gleam", "power": 80, "accuracy": 100, "type": "Hada"},
+      {"name": "Energy Ball", "power": 90, "accuracy": 100, "type": "Planta"},
+      {"name": "Venoshock", "power": 65, "accuracy": 100, "type": "Veneno"},
+      {"name": "Petal Blizzard", "power": 90, "accuracy": 100, "type": "Planta"}
+    ]
+  },
+  {
+    "id": 7, "name": "Yanmega", "dificultad": "Intermediate", "tipo": "Bicho/Volador", "stats": { "hp": 86, "atk": 76, "def": 86, "spe": 95 },
+    "img_mini": "assets/sprites_mini/yanmega.png", "img_large_gif": "assets/sprites_anim/yanmega.gif",
+    "moves": [
+      {"name": "Bug Buzz", "power": 90, "accuracy": 100, "type": "Bicho"},
+      {"name": "Air Slash", "power": 75, "accuracy": 95, "type": "Volador"},
+      {"name": "U-turn", "power": 70, "accuracy": 100, "type": "Bicho"},
+      {"name": "Shadow Ball", "power": 80, "accuracy": 100, "type": "Fantasma"},
+      {"name": "Giga Drain", "power": 75, "accuracy": 100, "type": "Planta"},
+      {"name": "Psychic", "power": 90, "accuracy": 100, "type": "Psíquico"},
+      {"name": "Solar Beam", "power": 120, "accuracy": 100, "type": "Planta"},
+      {"name": "Ancient Power", "power": 60, "accuracy": 100, "type": "Roca"}
+    ]
+  },
+  {
+    "id": 8, "name": "Porygon-Z", "dificultad": "Expert", "tipo": "Normal", "stats": { "hp": 85, "atk": 80, "def": 70, "spe": 90 },
+    "img_mini": "assets/sprites_mini/porygon-z.png", "img_large_gif": "assets/sprites_anim/porygon-z.gif",
+    "moves": [
+      {"name": "Tri Attack", "power": 80, "accuracy": 100, "type": "Normal"},
+      {"name": "Ice Beam", "power": 90, "accuracy": 100, "type": "Hielo"},
+      {"name": "Thunderbolt", "power": 90, "accuracy": 100, "type": "Eléctrico"},
+      {"name": "Dark Pulse", "power": 80, "accuracy": 100, "type": "Siniestro"},
+      {"name": "Shadow Ball", "power": 80, "accuracy": 100, "type": "Fantasma"},
+      {"name": "Psychic", "power": 90, "accuracy": 100, "type": "Psíquico"},
+      {"name": "Signal Beam", "power": 75, "accuracy": 100, "type": "Bicho"},
+      {"name": "Hyper Beam", "power": 150, "accuracy": 90, "type": "Normal"}
+    ]
+  },
+  {
+    "id": 9, "name": "Mamoswine", "dificultad": "Novice", "tipo": "Hielo/Tierra", "stats": { "hp": 110, "atk": 130, "def": 80, "spe": 80 },
+    "img_mini": "assets/sprites_mini/mamoswine.png", "img_large_gif": "assets/sprites_anim/mamoswine.gif",
+    "moves": [
+      {"name": "Earthquake", "power": 100, "accuracy": 100, "type": "Tierra"},
+      {"name": "Icicle Crash", "power": 85, "accuracy": 90, "type": "Hielo"},
+      {"name": "Ice Shard", "power": 40, "accuracy": 100, "type": "Hielo"},
+      {"name": "Knock Off", "power": 65, "accuracy": 100, "type": "Siniestro"},
+      {"name": "Superpower", "power": 120, "accuracy": 100, "type": "Lucha"},
+      {"name": "Stone Edge", "power": 100, "accuracy": 80, "type": "Roca"},
+      {"name": "Iron Head", "power": 80, "accuracy": 100, "type": "Acero"},
+      {"name": "Avalanche", "power": 60, "accuracy": 100, "type": "Hielo"}
+    ]
+  },
+  {
+    "id": 10, "name": "Gastrodon", "dificultad": "Intermediate", "tipo": "Agua/Tierra", "stats": { "hp": 111, "atk": 83, "def": 68, "spe": 39 },
+    "img_mini": "assets/sprites_mini/gastrodon.png", "img_large_gif": "assets/sprites_anim/gastrodon.gif",
+    "moves": [
+      {"name": "Earth Power", "power": 90, "accuracy": 100, "type": "Tierra"},
+      {"name": "Surf", "power": 90, "accuracy": 100, "type": "Agua"},
+      {"name": "Ice Beam", "power": 90, "accuracy": 100, "type": "Hielo"},
+      {"name": "Sludge Bomb", "power": 90, "accuracy": 100, "type": "Veneno"},
+      {"name": "Mud Bomb", "power": 65, "accuracy": 85, "type": "Tierra"},
+      {"name": "Water Pulse", "power": 60, "accuracy": 100, "type": "Agua"},
+      {"name": "Icy Wind", "power": 55, "accuracy": 95, "type": "Hielo"},
+      {"name": "Earthquake", "power": 100, "accuracy": 100, "type": "Tierra"}
+    ]
+  },
+  {
+    "id": 11, "name": "Mismagius", "dificultad": "Expert", "tipo": "Fantasma", "stats": { "hp": 60, "atk": 60, "def": 60, "spe": 105 },
+    "img_mini": "assets/sprites_mini/mismagius.png", "img_large_gif": "assets/sprites_anim/mismagius.gif",
+    "moves": [
+      {"name": "Shadow Ball", "power": 80, "accuracy": 100, "type": "Fantasma"},
+      {"name": "Mystical Fire", "power": 75, "accuracy": 100, "type": "Fuego"},
+      {"name": "Dazzling Gleam", "power": 80, "accuracy": 100, "type": "Hada"},
+      {"name": "Thunderbolt", "power": 90, "accuracy": 100, "type": "Eléctrico"},
+      {"name": "Energy Ball", "power": 90, "accuracy": 100, "type": "Planta"},
+      {"name": "Psychic", "power": 90, "accuracy": 100, "type": "Psíquico"},
+      {"name": "Power Gem", "power": 80, "accuracy": 100, "type": "Roca"},
+      {"name": "Dark Pulse", "power": 80, "accuracy": 100, "type": "Siniestro"}
+    ]
+  },
+  {
+    "id": 12, "name": "Honchkrow", "dificultad": "Intermediate", "tipo": "Siniestro/Volador", "stats": { "hp": 100, "atk": 125, "def": 52, "spe": 71 },
+    "img_mini": "assets/sprites_mini/honchkrow.png", "img_large_gif": "assets/sprites_anim/honchkrow.gif",
+    "moves": [
+      {"name": "Brave Bird", "power": 120, "accuracy": 100, "type": "Volador"},
+      {"name": "Sucker Punch", "power": 70, "accuracy": 100, "type": "Siniestro"},
+      {"name": "Night Slash", "power": 70, "accuracy": 100, "type": "Siniestro"},
+      {"name": "Heat Wave", "power": 95, "accuracy": 90, "type": "Fuego"},
+      {"name": "Superpower", "power": 120, "accuracy": 100, "type": "Lucha"},
+      {"name": "Drill Peck", "power": 80, "accuracy": 100, "type": "Volador"},
+      {"name": "Steel Wing", "power": 70, "accuracy": 90, "type": "Acero"},
+      {"name": "Dark Pulse", "power": 80, "accuracy": 100, "type": "Siniestro"}
+    ]
+  },
+  {
+    "id": 13, "name": "Bronzong", "dificultad": "Intermediate", "tipo": "Acero/Psíquico", "stats": { "hp": 67, "atk": 89, "def": 116, "spe": 33 },
+    "img_mini": "assets/sprites_mini/bronzong.png", "img_large_gif": "assets/sprites_anim/bronzong.gif",
+    "moves": [
+      {"name": "Gyro Ball", "power": 80, "accuracy": 100, "type": "Acero"},
+      {"name": "Earthquake", "power": 100, "accuracy": 100, "type": "Tierra"},
+      {"name": "Zen Headbutt", "power": 80, "accuracy": 90, "type": "Psíquico"},
+      {"name": "Flash Cannon", "power": 80, "accuracy": 100, "type": "Acero"},
+      {"name": "Psychic", "power": 90, "accuracy": 100, "type": "Psíquico"},
+      {"name": "Rock Slide", "power": 75, "accuracy": 90, "type": "Roca"},
+      {"name": "Iron Head", "power": 80, "accuracy": 100, "type": "Acero"},
+      {"name": "Shadow Ball", "power": 80, "accuracy": 100, "type": "Fantasma"}
+    ]
+  },
+  {
+    "id": 14, "name": "Spiritomb", "dificultad": "Expert", "tipo": "Fantasma/Siniestro", "stats": { "hp": 50, "atk": 92, "def": 108, "spe": 35 },
+    "img_mini": "assets/sprites_mini/spiritomb.png", "img_large_gif": "assets/sprites_anim/spiritomb.gif",
+    "moves": [
+      {"name": "Dark Pulse", "power": 80, "accuracy": 100, "type": "Siniestro"},
+      {"name": "Shadow Ball", "power": 80, "accuracy": 100, "type": "Fantasma"},
+      {"name": "Sucker Punch", "power": 70, "accuracy": 100, "type": "Siniestro"},
+      {"name": "Foul Play", "power": 95, "accuracy": 100, "type": "Siniestro"},
+      {"name": "Psychic", "power": 90, "accuracy": 100, "type": "Psíquico"},
+      {"name": "Icy Wind", "power": 55, "accuracy": 95, "type": "Hielo"},
+      {"name": "Ominous Wind", "power": 60, "accuracy": 100, "type": "Fantasma"},
+      {"name": "Snarl", "power": 55, "accuracy": 95, "type": "Siniestro"}
+    ]
+  },
+  {
+    "id": 15, "name": "Garchomp", "dificultad": "Novice", "tipo": "Dragón/Tierra", "stats": { "hp": 108, "atk": 130, "def": 95, "spe": 102 },
+    "img_mini": "assets/sprites_mini/garchomp.png", "img_large_gif": "assets/sprites_anim/garchomp.gif",
+    "moves": [
+      {"name": "Earthquake", "power": 100, "accuracy": 100, "type": "Tierra"},
+      {"name": "Outrage", "power": 120, "accuracy": 100, "type": "Dragón"},
+      {"name": "Dragon Claw", "power": 80, "accuracy": 100, "type": "Dragón"},
+      {"name": "Stone Edge", "power": 100, "accuracy": 80, "type": "Roca"},
+      {"name": "Fire Fang", "power": 65, "accuracy": 95, "type": "Fuego"},
+      {"name": "Crunch", "power": 80, "accuracy": 100, "type": "Siniestro"},
+      {"name": "Iron Head", "power": 80, "accuracy": 100, "type": "Acero"},
+      {"name": "Poison Jab", "power": 80, "accuracy": 100, "type": "Veneno"}
+    ]
+  },
+  {
+    "id": 16, "name": "Lucario", "dificultad": "Expert", "tipo": "Lucha/Acero", "stats": { "hp": 70, "atk": 110, "def": 70, "spe": 90 },
+    "img_mini": "assets/sprites_mini/lucario.png", "img_large_gif": "assets/sprites_anim/lucario.gif",
+    "moves": [
+      {"name": "Aura Sphere", "power": 90, "accuracy": 100, "type": "Lucha"},
+      {"name": "Flash Cannon", "power": 80, "accuracy": 100, "type": "Acero"},
+      {"name": "Close Combat", "power": 120, "accuracy": 100, "type": "Lucha"},
+      {"name": "Meteor Mash", "power": 90, "accuracy": 90, "type": "Acero"},
+      {"name": "Extreme Speed", "power": 80, "accuracy": 100, "type": "Normal"},
+      {"name": "Ice Punch", "power": 75, "accuracy": 100, "type": "Hielo"},
+      {"name": "Earthquake", "power": 100, "accuracy": 100, "type": "Tierra"},
+      {"name": "Dark Pulse", "power": 80, "accuracy": 100, "type": "Siniestro"}
+    ]
+  },
+  {
+    "id": 17, "name": "Hippowdon", "dificultad": "Intermediate", "tipo": "Tierra", "stats": { "hp": 108, "atk": 112, "def": 118, "spe": 47 },
+    "img_mini": "assets/sprites_mini/hippowdon.png", "img_large_gif": "assets/sprites_anim/hippowdon.gif",
+    "moves": [
+      {"name": "Earthquake", "power": 100, "accuracy": 100, "type": "Tierra"},
+      {"name": "Stone Edge", "power": 100, "accuracy": 80, "type": "Roca"},
+      {"name": "Crunch", "power": 80, "accuracy": 100, "type": "Siniestro"},
+      {"name": "Ice Fang", "power": 65, "accuracy": 95, "type": "Hielo"},
+      {"name": "Fire Fang", "power": 65, "accuracy": 95, "type": "Fuego"},
+      {"name": "Thunder Fang", "power": 65, "accuracy": 95, "type": "Eléctrico"},
+      {"name": "Iron Head", "power": 80, "accuracy": 100, "type": "Acero"},
+      {"name": "Earth Power", "power": 90, "accuracy": 100, "type": "Tierra"}
+    ]
+  },
+  {
+    "id": 18, "name": "Drapion", "dificultad": "Intermediate", "tipo": "Veneno/Siniestro", "stats": { "hp": 70, "atk": 90, "def": 110, "spe": 95 },
+    "img_mini": "assets/sprites_mini/drapion.png", "img_large_gif": "assets/sprites_anim/drapion.gif",
+    "moves": [
+      {"name": "Knock Off", "power": 65, "accuracy": 100, "type": "Siniestro"},
+      {"name": "Poison Jab", "power": 80, "accuracy": 100, "type": "Veneno"},
+      {"name": "Cross Poison", "power": 70, "accuracy": 100, "type": "Veneno"},
+      {"name": "Crunch", "power": 80, "accuracy": 100, "type": "Siniestro"},
+      {"name": "Earthquake", "power": 100, "accuracy": 100, "type": "Tierra"},
+      {"name": "Aqua Tail", "power": 90, "accuracy": 90, "type": "Agua"},
+      {"name": "Ice Fang", "power": 65, "accuracy": 95, "type": "Hielo"},
+      {"name": "X-Scissor", "power": 80, "accuracy": 100, "type": "Bicho"}
+    ]
+  },
+  {
+    "id": 19, "name": "Rhyperior", "dificultad": "Novice", "tipo": "Tierra/Roca", "stats": { "hp": 115, "atk": 140, "def": 130, "spe": 40 },
+    "img_mini": "assets/sprites_mini/rhyperior.png", "img_large_gif": "assets/sprites_anim/rhyperior.gif",
+    "moves": [
+      {"name": "Earthquake", "power": 100, "accuracy": 100, "type": "Tierra"},
+      {"name": "Stone Edge", "power": 100, "accuracy": 80, "type": "Roca"},
+      {"name": "Rock Wrecker", "power": 150, "accuracy": 90, "type": "Roca"},
+      {"name": "Megahorn", "power": 120, "accuracy": 85, "type": "Bicho"},
+      {"name": "Ice Punch", "power": 75, "accuracy": 100, "type": "Hielo"},
+      {"name": "Fire Punch", "power": 75, "accuracy": 100, "type": "Fuego"},
+      {"name": "Hammer Arm", "power": 100, "accuracy": 90, "type": "Lucha"},
+      {"name": "Iron Tail", "power": 100, "accuracy": 75, "type": "Acero"}
+    ]
+  },
+  {
+    "id": 20, "name": "Electivire", "dificultad": "Intermediate", "tipo": "Eléctrico", "stats": { "hp": 75, "atk": 123, "def": 67, "spe": 95 },
+    "img_mini": "assets/sprites_mini/electivire.png", "img_large_gif": "assets/sprites_anim/electivire.gif",
+    "moves": [
+      {"name": "Wild Charge", "power": 90, "accuracy": 100, "type": "Eléctrico"},
+      {"name": "Ice Punch", "power": 75, "accuracy": 100, "type": "Hielo"},
+      {"name": "Earthquake", "power": 100, "accuracy": 100, "type": "Tierra"},
+      {"name": "Cross Chop", "power": 100, "accuracy": 80, "type": "Lucha"},
+      {"name": "Fire Punch", "power": 75, "accuracy": 100, "type": "Fuego"},
+      {"name": "Thunder Punch", "power": 75, "accuracy": 100, "type": "Eléctrico"},
+      {"name": "Iron Tail", "power": 100, "accuracy": 75, "type": "Acero"},
+      {"name": "Rock Slide", "power": 75, "accuracy": 90, "type": "Roca"}
+    ]
+  },
+  {
+    "id": 21, "name": "Froslass", "dificultad": "Expert", "tipo": "Hielo/Fantasma", "stats": { "hp": 70, "atk": 80, "def": 70, "spe": 110 },
+    "img_mini": "assets/sprites_mini/froslass.png", "img_large_gif": "assets/sprites_anim/froslass.gif",
+    "moves": [
+      {"name": "Ice Beam", "power": 90, "accuracy": 100, "type": "Hielo"},
+      {"name": "Shadow Ball", "power": 80, "accuracy": 100, "type": "Fantasma"},
+      {"name": "Frost Breath", "power": 60, "accuracy": 90, "type": "Hielo"},
+      {"name": "Ominous Wind", "power": 60, "accuracy": 100, "type": "Fantasma"},
+      {"name": "Thunderbolt", "power": 90, "accuracy": 100, "type": "Eléctrico"},
+      {"name": "Psychic", "power": 90, "accuracy": 100, "type": "Psíquico"},
+      {"name": "Icy Wind", "power": 55, "accuracy": 95, "type": "Hielo"},
+      {"name": "Draining Kiss", "power": 50, "accuracy": 100, "type": "Hada"}
+    ]
+  },
+  {
+    "id": 22, "name": "Weavile", "dificultad": "Expert", "tipo": "Siniestro/Hielo", "stats": { "hp": 70, "atk": 120, "def": 65, "spe": 125 },
+    "img_mini": "assets/sprites_mini/weavile.png", "img_large_gif": "assets/sprites_anim/weavile.gif",
+    "moves": [
+      {"name": "Knock Off", "power": 65, "accuracy": 100, "type": "Siniestro"},
+      {"name": "Icicle Crash", "power": 85, "accuracy": 90, "type": "Hielo"},
+      {"name": "Ice Shard", "power": 40, "accuracy": 100, "type": "Hielo"},
+      {"name": "Night Slash", "power": 70, "accuracy": 100, "type": "Siniestro"},
+      {"name": "Low Kick", "power": 80, "accuracy": 100, "type": "Lucha"},
+      {"name": "Poison Jab", "power": 80, "accuracy": 100, "type": "Veneno"},
+      {"name": "X-Scissor", "power": 80, "accuracy": 100, "type": "Bicho"},
+      {"name": "Brick Break", "power": 75, "accuracy": 100, "type": "Lucha"}
+    ]
+  },
+  {
+    "id": 23, "name": "Togekiss", "dificultad": "Intermediate", "tipo": "Hada/Volador", "stats": { "hp": 85, "atk": 50, "def": 95, "spe": 80 },
+    "img_mini": "assets/sprites_mini/togekiss.png", "img_large_gif": "assets/sprites_anim/togekiss.gif",
+    "moves": [
+      {"name": "Air Slash", "power": 75, "accuracy": 95, "type": "Volador"},
+      {"name": "Dazzling Gleam", "power": 80, "accuracy": 100, "type": "Hada"},
+      {"name": "Aura Sphere", "power": 90, "accuracy": 100, "type": "Lucha"},
+      {"name": "Flamethrower", "power": 90, "accuracy": 100, "type": "Fuego"},
+      {"name": "Shadow Ball", "power": 80, "accuracy": 100, "type": "Fantasma"},
+      {"name": "Tri Attack", "power": 80, "accuracy": 100, "type": "Normal"},
+      {"name": "Psychic", "power": 90, "accuracy": 100, "type": "Psíquico"},
+      {"name": "Shock Wave", "power": 60, "accuracy": 100, "type": "Eléctrico"}
+    ]
+  },
+  {
+    "id": 24, "name": "Magnezone", "dificultad": "Intermediate", "tipo": "Eléctrico/Acero", "stats": { "hp": 70, "atk": 70, "def": 115, "spe": 60 },
+    "img_mini": "assets/sprites_mini/magnezone.png", "img_large_gif": "assets/sprites_anim/magnezone.gif",
+    "moves": [
+      {"name": "Thunderbolt", "power": 90, "accuracy": 100, "type": "Eléctrico"},
+      {"name": "Flash Cannon", "power": 80, "accuracy": 100, "type": "Acero"},
+      {"name": "Volt Switch", "power": 70, "accuracy": 100, "type": "Eléctrico"},
+      {"name": "Tri Attack", "power": 80, "accuracy": 100, "type": "Normal"},
+      {"name": "Discharge", "power": 80, "accuracy": 100, "type": "Eléctrico"},
+      {"name": "Signal Beam", "power": 75, "accuracy": 100, "type": "Bicho"},
+      {"name": "Zap Cannon", "power": 120, "accuracy": 50, "type": "Eléctrico"},
+      {"name": "Gyro Ball", "power": 80, "accuracy": 100, "type": "Acero"}
+    ]
+  },
+  {
+    "id": 25, "name": "Gliscor", "dificultad": "Expert", "tipo": "Tierra/Volador", "stats": { "hp": 75, "atk": 95, "def": 125, "spe": 95 },
+    "img_mini": "assets/sprites_mini/gliscor.png", "img_large_gif": "assets/sprites_anim/gliscor.gif",
+    "moves": [
+      {"name": "Earthquake", "power": 100, "accuracy": 100, "type": "Tierra"},
+      {"name": "Acrobatics", "power": 55, "accuracy": 100, "type": "Volador"},
+      {"name": "Knock Off", "power": 65, "accuracy": 100, "type": "Siniestro"},
+      {"name": "U-turn", "power": 70, "accuracy": 100, "type": "Bicho"},
+      {"name": "Ice Fang", "power": 65, "accuracy": 95, "type": "Hielo"},
+      {"name": "X-Scissor", "power": 80, "accuracy": 100, "type": "Bicho"},
+      {"name": "Night Slash", "power": 70, "accuracy": 100, "type": "Siniestro"},
+      {"name": "Sky Attack", "power": 140, "accuracy": 90, "type": "Volador"}
+    ]
+  },
+  {
+    "id": 26, "name": "Gallade", "dificultad": "Intermediate", "tipo": "Psíquico/Lucha", "stats": { "hp": 68, "atk": 125, "def": 65, "spe": 80 },
+    "img_mini": "assets/sprites_mini/gallade.png", "img_large_gif": "assets/sprites_anim/gallade.gif",
+    "moves": [
+      {"name": "Close Combat", "power": 120, "accuracy": 100, "type": "Lucha"},
+      {"name": "Zen Headbutt", "power": 80, "accuracy": 90, "type": "Psíquico"},
+      {"name": "Psycho Cut", "power": 70, "accuracy": 100, "type": "Psíquico"},
+      {"name": "Knock Off", "power": 65, "accuracy": 100, "type": "Siniestro"},
+      {"name": "Leaf Blade", "power": 90, "accuracy": 100, "type": "Planta"},
+      {"name": "Ice Punch", "power": 75, "accuracy": 100, "type": "Hielo"},
+      {"name": "Earthquake", "power": 100, "accuracy": 100, "type": "Tierra"},
+      {"name": "Poison Jab", "power": 80, "accuracy": 100, "type": "Veneno"}
+    ]
+  },
+  {
+    "id": 27, "name": "Leafeon", "dificultad": "Novice", "tipo": "Planta", "stats": { "hp": 65, "atk": 110, "def": 130, "spe": 95 },
+    "img_mini": "assets/sprites_mini/leafeon.png", "img_large_gif": "assets/sprites_anim/leafeon.gif",
+    "moves": [
+      {"name": "Leaf Blade", "power": 90, "accuracy": 100, "type": "Planta"},
+      {"name": "Knock Off", "power": 65, "accuracy": 100, "type": "Siniestro"},
+      {"name": "X-Scissor", "power": 80, "accuracy": 100, "type": "Bicho"},
+      {"name": "Iron Tail", "power": 100, "accuracy": 75, "type": "Acero"},
+      {"name": "Seed Bomb", "power": 80, "accuracy": 100, "type": "Planta"},
+      {"name": "Quick Attack", "power": 40, "accuracy": 100, "type": "Normal"},
+      {"name": "Aerial Ace", "power": 60, "accuracy": 100, "type": "Volador"},
+      {"name": "Bullet Seed", "power": 25, "accuracy": 100, "type": "Planta"}
+    ]
+  },
+  {
+    "id": 28, "name": "Glaceon", "dificultad": "Intermediate", "tipo": "Hielo", "stats": { "hp": 65, "atk": 60, "def": 110, "spe": 65 },
+    "img_mini": "assets/sprites_mini/glaceon.png", "img_large_gif": "assets/sprites_anim/glaceon.gif",
+    "moves": [
+      {"name": "Ice Beam", "power": 90, "accuracy": 100, "type": "Hielo"},
+      {"name": "Freeze-Dry", "power": 70, "accuracy": 100, "type": "Hielo"},
+      {"name": "Shadow Ball", "power": 80, "accuracy": 100, "type": "Fantasma"},
+      {"name": "Water Pulse", "power": 60, "accuracy": 100, "type": "Agua"},
+      {"name": "Frost Breath", "power": 60, "accuracy": 90, "type": "Hielo"},
+      {"name": "Icy Wind", "power": 55, "accuracy": 95, "type": "Hielo"},
+      {"name": "Signal Beam", "power": 75, "accuracy": 100, "type": "Bicho"},
+      {"name": "Blizzard", "power": 110, "accuracy": 70, "type": "Hielo"}
+    ]
+  },
+  {
+    "id": 29, "name": "Dusknoir", "dificultad": "Expert", "tipo": "Fantasma", "stats": { "hp": 45, "atk": 100, "def": 135, "spe": 45 },
+    "img_mini": "assets/sprites_mini/dusknoir.png", "img_large_gif": "assets/sprites_anim/dusknoir.gif",
+    "moves": [
+      {"name": "Shadow Sneak", "power": 40, "accuracy": 100, "type": "Fantasma"},
+      {"name": "Earthquake", "power": 100, "accuracy": 100, "type": "Tierra"},
+      {"name": "Ice Punch", "power": 75, "accuracy": 100, "type": "Hielo"},
+      {"name": "Shadow Punch", "power": 60, "accuracy": 100, "type": "Fantasma"},
+      {"name": "Fire Punch", "power": 75, "accuracy": 100, "type": "Fuego"},
+      {"name": "Thunder Punch", "power": 75, "accuracy": 100, "type": "Eléctrico"},
+      {"name": "Brick Break", "power": 75, "accuracy": 100, "type": "Lucha"},
+      {"name": "Rock Slide", "power": 75, "accuracy": 90, "type": "Roca"}
+    ]
+  },
+  {
+    "id": 30, "name": "Magmortar", "dificultad": "Intermediate", "tipo": "Fuego", "stats": { "hp": 75, "atk": 95, "def": 67, "spe": 83 },
+    "img_mini": "assets/sprites_mini/magmortar.png", "img_large_gif": "assets/sprites_anim/magmortar.gif",
+    "moves": [
+      {"name": "Fire Blast", "power": 110, "accuracy": 85, "type": "Fuego"},
+      {"name": "Flamethrower", "power": 90, "accuracy": 100, "type": "Fuego"},
+      {"name": "Thunderbolt", "power": 90, "accuracy": 100, "type": "Eléctrico"},
+      {"name": "Focus Blast", "power": 120, "accuracy": 70, "type": "Lucha"},
+      {"name": "Psychic", "power": 90, "accuracy": 100, "type": "Psíquico"},
+      {"name": "Clear Smog", "power": 50, "accuracy": 100, "type": "Veneno"},
+      {"name": "Lava Plume", "power": 80, "accuracy": 100, "type": "Fuego"},
+      {"name": "Earthquake", "power": 100, "accuracy": 100, "type": "Tierra"}
+    ]
+  }
+]
