@@ -2,9 +2,11 @@ import tkinter as tk
 from tkinter import messagebox
 import json
 import os
+import sys
 from PIL import Image, ImageTk, ImageSequence
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.dirname(BASE_DIR))
 
 def path(*r):
     return os.path.join(BASE_DIR, "..", *r)
@@ -152,6 +154,13 @@ class App:
         self.btn_team = tk.Button(self.root, text="VER EQUIPO (0/4)", bg=self.accent_green, fg="white", font=("Arial", 13, "bold"), bd=0, cursor="hand2", padx=20, pady=10, command=self.ver_equipo)
         self.btn_team.place(relx=0.95, rely=0.04, anchor="ne")
         self.bind_hover(self.btn_team, self.accent_green, "#4ade80")
+
+        # ---- NUEVO BOTÓN / boton para iniciar batalla :p ----
+        self.btn_batalla = tk.Button(self.root, text="⚔️ COMENZAR BATALLA", bg="#e3350d", fg="white", 
+                                    font=("Arial", 16, "bold"), bd=0, cursor="hand2", padx=20, pady=10, 
+                                    command=self.iniciar_batalla)
+        self.btn_batalla.place(relx=0.5, rely=0.08, anchor="center")
+        self.bind_hover(self.btn_batalla, "#e3350d", "#ff5c36")
 
         # -------- CARRUSEL INFERIOR
         self.carousel_container = tk.Frame(self.root, bg=self.bg_panel)
@@ -319,7 +328,46 @@ class App:
         else:
             messagebox.showinfo("Equipo Vacío", "Aún no has seleccionado ningún Pokémon.")
 
-# ==========================================
+    # ==========================================
+    # GESTOR DE VENTANAS (TRANSICIÓN A BATALLA)
+    # ==========================================
+    def iniciar_batalla(self):
+        if len(self.selected) < 1:
+            messagebox.showwarning("Atención", "¡Necesitas al menos 1 Pokémon en tu equipo para luchar!")
+            return
+            
+        # 1. Ocultar todos los frames de la pantalla de selección
+        self.left.place_forget()
+        self.center.place_forget()
+        self.right.place_forget()
+        self.carousel_container.place_forget()
+        self.btn_batalla.place_forget()
+        self.btn_add.place_forget()
+        
+        # 2. Llamar a la Pantalla de Batalla
+        from src.battle_ui import PantallaBatalla
+        
+        self.pantalla_combate = PantallaBatalla(self.root, self.selected, self.volver_al_menu)
+        self.pantalla_combate.place(relx=0, rely=0, relwidth=1, relheight=1)
+
+    def volver_al_menu(self):
+        # 1. Destruir la pantalla de combate
+        if hasattr(self, 'pantalla_combate'):
+            self.pantalla_combate.destroy()
+            
+        # 2. Volver a mostrar los elementos del menú
+        self.left.place(relx=0.05, rely=0.1, relwidth=0.25, relheight=0.6)
+        self.center.place(relx=0.35, rely=0.1, relwidth=0.30, relheight=0.55)
+        self.right.place(relx=0.70, rely=0.1, relwidth=0.25, relheight=0.55)
+        self.carousel_container.place(relx=0, rely=0.78, relwidth=1, relheight=0.22)
+        
+        self.btn_batalla.place(relx=0.5, rely=0.08, anchor="center")
+        self.btn_add.place(relx=0.5, rely=0.68, anchor="center")
+        
+        # Limpiar equipo para una nueva partida
+        self.selected = []
+        self.update_all()
+#-------------------------------------------------
 if __name__ == "__main__":
     root = tk.Tk()
     App(root)

@@ -28,15 +28,14 @@ class Pokemon:
         self.defense = data["stats"]["def"]
         self.speed = data["stats"]["spe"]
         
-        # URLs de imágenes para cuando las conectemos con Tkinter
-        self.img_mini = data["img_mini"]
-        self.img_large_gif = data["img_large_gif"]
-        
+        # URLs de imágenes para Tkinter
+        self.img_mini = data.get("img_mini", "")
+        self.img_large_gif = data.get("img_large_gif", "")
+        self.img_back = data.get("img_back", "")
         # REQUISITO: Seleccionar aleatoriamente 4 movimientos de los 8 disponibles
         self.movimientos = self._seleccionar_movimientos(data["moves"])
         
     def _seleccionar_movimientos(self, moves_data):
-        # random.sample toma 4 elementos únicos de la lista
         seleccionados = random.sample(moves_data, 4)
         return [Movimiento(m["name"], m["power"], m["accuracy"], m["type"]) for m in seleccionados]
 
@@ -48,8 +47,12 @@ class Pokemon:
     def esta_debilitado(self):
         return self.current_hp <= 0
 
+    # NUEVO: Función vital para la barra de vida gráfica (HUD)
+    def obtener_porcentaje_hp(self):
+        return (self.current_hp / self.max_hp) * 100
+
 # ==========================================
-# CLASE COMBATE Y FÓRMULA DE DAÑO (ACTUALIZADA FASE 2)
+# CLASE COMBATE Y FÓRMULA DE DAÑO
 # ==========================================
 class Combate:
     def __init__(self, equipo1, equipo2, factor_k=0.1):
@@ -58,7 +61,6 @@ class Combate:
         self.k = factor_k
         self.turno_actual = 1
         
-        # Inician los primeros de la lista
         self.pokemon_actual1 = self.equipo1[0]
         self.pokemon_actual2 = self.equipo2[0]
 
@@ -67,10 +69,10 @@ class Combate:
         vivos_j2 = sum(1 for p in self.equipo2 if not p.esta_debilitado())
         
         if vivos_j1 == 0:
-            return 2 # Gana Jugador 2
+            return 2 
         elif vivos_j2 == 0:
-            return 1 # Gana Jugador 1
-        return 0 # Sigue el juego
+            return 1 
+        return 0 
 
     def calcular_dano(self, atacante, defensor, movimiento):
         if movimiento.power == 0:
@@ -78,7 +80,6 @@ class Combate:
         termino1 = (atacante.attack / defensor.defense) * movimiento.power
         termino2 = defensor.speed * self.k
         damage = termino1 - termino2
-        import math
         return max(1, math.floor(damage))
 
     def aplicar_accion(self, jugador, accion):
@@ -90,19 +91,26 @@ class Combate:
             else:
                 self.pokemon_actual2 = self.equipo2[indice]
 
+    # MEJORADO: Ahora devuelve un "registro" (log) para que Tkinter lo muestre en la caja de diálogo
     def resolver_turno(self, accion1, accion2):
-        """Resuelve el turno considerando que los cambios van primero y luego los ataques basados en velocidad"""
         tipo1, idx1 = accion1
         tipo2, idx2 = accion2
         
-        # 1. FASE DE CAMBIOS (Los cambios siempre ocurren antes que los ataques)
+        log_turno = [] # Aquí guardaremos los mensajes para la UI
+        log_turno.append(f"--- TURNO {self.turno_actual} ---")
+
+        # 1. FASE DE CAMBIOS
         if tipo1 == "CAMBIAR":
+            viejo = self.pokemon_actual1.name
             self.pokemon_actual1 = self.equipo1[idx1]
+            log_turno.append(f"Jugador 1 retira a {viejo} y envía a {self.pokemon_actual1.name}!")
+            
         if tipo2 == "CAMBIAR":
+            viejo = self.pokemon_actual2.name
             self.pokemon_actual2 = self.equipo2[idx2]
+            log_turno.append(f"El rival retira a {viejo} y envía a {self.pokemon_actual2.name}!")
 
         # 2. FASE DE ATAQUE
-        # Determinamos quién ataca primero por velocidad
         primero, segundo = 1, 2
         act1, act2 = accion1, accion2
         poke_primero, poke_segundo = self.pokemon_actual1, self.pokemon_actual2
@@ -112,28 +120,35 @@ class Combate:
             act1, act2 = accion2, accion1
             poke_primero, poke_segundo = self.pokemon_actual2, self.pokemon_actual1
 
-        # Ejecuta el ataque del primero (si eligió atacar)
+        # Ataque del primero
         if act1[0] == "ATACAR" and not poke_primero.esta_debilitado():
             mov = poke_primero.movimientos[act1[1]]
+            log_turno.append(f"¡{poke_primero.name} usó {mov.name}!")
             dano = self.calcular_dano(poke_primero, poke_segundo, mov)
             poke_segundo.recibir_dano(dano)
+            log_turno.append(f"El ataque hizo {dano} de daño.")
+            
+            if poke_segundo.esta_debilitado():
+                log_turno.append(f"¡{poke_segundo.name} se ha debilitado!")
 
-        # Ejecuta el ataque del segundo (si sobrevivió al ataque del primero)
+        # Ataque del segundo
         if act2[0] == "ATACAR" and not poke_segundo.esta_debilitado():
             mov = poke_segundo.movimientos[act2[1]]
+            log_turno.append(f"¡{poke_segundo.name} usó {mov.name}!")
             dano = self.calcular_dano(poke_segundo, poke_primero, mov)
             poke_primero.recibir_dano(dano)
+            log_turno.append(f"El ataque hizo {dano} de daño.")
+            
+            if poke_primero.esta_debilitado():
+                log_turno.append(f"¡{poke_primero.name} se ha debilitado!")
             
         self.turno_actual += 1
+        return log_turno # Retornamos la lista de eventos para la Interfaz Gráfica
 
 # ==========================================
-# FUNCIÓN UTILITARIA PARA CARGAR DATOS
+# FUNCIÓN UTILITARIA
 # ==========================================
 def cargar_equipo_desde_json(ruta_json, ids_equipo):
-    """
-    Lee el JSON y convierte los IDs seleccionados en objetos Pokemon jugables.
-    """
-    
     with open(ruta_json, "r", encoding="utf-8") as f:
         todos_pokemons = json.load(f)
         
@@ -143,36 +158,3 @@ def cargar_equipo_desde_json(ruta_json, ids_equipo):
         if data:
             equipo.append(Pokemon(data))
     return equipo
-
-# --- PRUEBA DE LA FASE 1 ---
-if __name__ == "__main__":
-    import os
-    
-    # Asegurar la ruta correcta al JSON
-    ruta_datos = os.path.join(os.path.dirname(__file__), "..", "data", "pokemons.json")
-    
-    # Simulamos que el Jugador 1 eligió a Torterra (ID 1) y el Jugador 2 a Infernape (ID 2)
-    equipo_j1 = cargar_equipo_desde_json(ruta_datos, [1])
-    equipo_j2 = cargar_equipo_desde_json(ruta_datos, [2])
-    
-    if equipo_j1 and equipo_j2:
-        torterra = equipo_j1[0]
-        infernape = equipo_j2[0]
-        
-        # Creamos el combate
-        batalla = Combate(equipo_j1, equipo_j2)
-        
-        print(f"🥊 ¡COMIENZA EL COMBATE!")
-        print(f"{torterra.name} (HP: {torterra.current_hp}) VS {infernape.name} (HP: {infernape.current_hp})\n")
-        
-        # Torterra elige su primer movimiento aleatorio
-        ataque_torterra = torterra.movimientos[0]
-        
-        print(f"> {torterra.name} usa {ataque_torterra.name} (Poder: {ataque_torterra.power})")
-        
-        # Usamos la fórmula
-        dano = batalla.calcular_dano(torterra, infernape, ataque_torterra)
-        infernape.recibir_dano(dano)
-        
-        print(f"💥 ¡Hizo {dano} de daño!")
-        print(f"❤️ HP restante de {infernape.name}: {infernape.current_hp}/{infernape.max_hp}")
